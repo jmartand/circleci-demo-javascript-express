@@ -23,7 +23,7 @@ jobs:
           name: test
           command: npm test
        - run:
-          name: install-npm-wee
+          name: install-npm-publish
           command: npm publish
       - run:
           name: code-coverage
