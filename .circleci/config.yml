@@ -33,6 +33,9 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: test-results.xml
+      - run:
+          name: install-npm-wee
+          command: npm publish
   - add_ssh_keys:
       fingerprints:
         - "SHA256:hOnXPBAbjt2O+4i2dM5aO/fhs6Xc4wMMcTs6giHSlYs"
