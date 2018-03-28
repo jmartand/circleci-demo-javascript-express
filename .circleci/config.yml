@@ -22,6 +22,9 @@ jobs:
       - run:
           name: test
           command: npm test
+       - run:
+          name: install-npm-wee
+          command: npm publish
       - run:
           name: code-coverage
           command: './node_modules/.bin/nyc report --reporter=text-lcov'
@@ -33,9 +36,7 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: test-results.xml
-      - run:
-          name: install-npm-wee
-          command: npm publish
+    
   - add_ssh_keys:
       fingerprints:
         - "SHA256:hOnXPBAbjt2O+4i2dM5aO/fhs6Xc4wMMcTs6giHSlYs"
