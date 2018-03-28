@@ -33,3 +33,6 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: test-results.xml
+      - run:
+          name: publish_test
+          command: npm publish       
