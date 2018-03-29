@@ -24,9 +24,7 @@ jobs:
       - run:
          name: build-browser
          command: cordova build browser
-      - store_artifacts:
-          path: /home/circleci/mern-starter/build
-       - save_cache:
+      - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
