@@ -34,5 +34,5 @@ jobs:
       - store_test_results:
           path: test-results.xml
       - run:
-          name: publish_test
-          command: npm publish       
+        name:install cordova
+        command: sudo npm install -g cordova
