@@ -42,4 +42,7 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: test-results.xml
+      - add_ssh_keys:
+          fingerprints:
+             - "SHA256:fhuMCpttXLMywsTsORdF7opvgepBF1jo3kSiroAVkgI"
      
