@@ -25,7 +25,7 @@ jobs:
          name: build-browser
          command: cordova build browser
       - store_artifacts:
-          paths: './usr/local/share'
+          path: ./usr/local/share
        - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
