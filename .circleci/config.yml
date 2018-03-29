@@ -18,6 +18,10 @@ jobs:
       - run:
          name: install-cordova
          command: sudo npm install -g cordova
+      - run:
+         name: add-cordova
+         command: sudo cordova platform add browser
+     
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
