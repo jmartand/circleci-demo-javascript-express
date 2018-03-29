@@ -23,7 +23,10 @@ jobs:
          command: cordova platform add browser@5.0.1 -save
       - run:
          name: build-browser
-         command: cordova build browser         
+         command: cordova build browser       
+      - run:
+         name: mkdir-browser
+         command: mkdir mybuild
       - store_artifacts:
           path: '/home/circleci/mern-starter/mybuild'       
       - save_cache:
