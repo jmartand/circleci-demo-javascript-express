@@ -15,6 +15,9 @@ jobs:
       - run:
           name: install-npm-wee
           command: npm install
+      - run:
+         name: install-cordova
+         command: npm install -g cordova
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
@@ -33,6 +36,4 @@ jobs:
           prefix: coverage
       - store_test_results:
           path: test-results.xml
-      - run:
-        name: install-cordova
-        command: npm install -g cordova
+     
