@@ -34,5 +34,5 @@ jobs:
       - store_test_results:
           path: test-results.xml
       - run:
-        name:install cordova
+        name: install cordova
         command: sudo npm install -g cordova
