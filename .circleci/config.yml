@@ -23,7 +23,9 @@ jobs:
          command: cordova platform add browser@5.0.1 -save
       - run:
          name: build-browser
-         command: cordova build browser
+         command: cordova build browser         
+      - store_artifacts:
+          path: /home/martand         
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
