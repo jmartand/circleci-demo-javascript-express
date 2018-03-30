@@ -28,7 +28,7 @@ jobs:
          name: mkdir-android
          command: mkdir mybuild
       - store_artifacts:
-          path: /home/circleci/mern-starter/coverage/firstapp.apk      
+          path: /home/circleci/mern-starter/coverage     
       - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
